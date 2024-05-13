@@ -1,0 +1,116 @@
+<section class="page-section" id="edit">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <h2 class="mt-0">Predict The Price </h2>
+
+        <hr class="divider my-4" />
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="row o-hidden border-0">
+        <div class="col-lg-12">
+          <h2 class="text-center mt-0" *ngIf="submitted"> Price Level:{{predictionprice}}</h2>
+          <p class="mt-0 alert alert-danger" *ngIf="emailError">
+            *Error:{{emailErrorMsg}}
+          </p>
+
+          <form [formGroup]="deviceForm" *ngIf="!submitted" (ngSubmit)="handleSubmit()">
+            <div class="form-group row">
+
+              <div class="col-sm-6 mb-3 mb-sm-0">
+                <label for="n_cores">N_Cores</label>
+                <div >
+                  <select #n_cores class="form-control form-control-user" type="number" formControlName="n_cores">
+                  <option >1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="touch_screen">touch_screen</label>
+                <div >
+                  <select #touch_screen class="form-control form-control-user" type="number" formControlName="touch_screen" >
+                    <option>false</option>
+                    <option>true</option>
+                                    </select>
+                </div>
+              </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="four_g">four_g</label>
+              <div >
+                <select #four_g class="form-control form-control-user" type="number" formControlName="four_g">
+                  <option>false</option>
+                  <option>true</option>
+                                </select>
+              </div>
+
+            </div>
+
+
+            <div class="form-group">
+              <label for="blue">blue</label>
+              <div >
+                <select #blue class="form-control form-control-user" type="number" formControlName="blue">
+                  <option>false</option>
+                  <option>true</option>
+                                </select>
+              </div>
+
+          </div>
+
+            <div class="form-group row">
+
+              <div class="col-sm-6 mb-3 mb-sm-0">
+                <label for="three_g">three_g</label>
+                <div >
+                  <select #three_g class="form-control form-control-user" type="number" formControlName="three_g">
+                  <option>false</option>
+                  <option>true</option>
+                  </select>
+                </div>
+
+            </div>
+
+              <div class="col-sm-6">
+                <label for="battery_power">battery_power</label>
+                <input class="form-control form-control-user" type="number" formControlName="battery_power" />
+                  </div>
+
+            </div>
+
+            <div class="form-group">
+              <label for="ram">ram</label>
+              <input class="form-control form-control-user" type="number" formControlName="ram" />
+          </div>
+
+
+            <div class="form-group">
+              <label for="px_width">px_width</label>
+              <input class="form-control form-control-user" type="number" formControlName="px_width" />
+          </div>
+
+
+            <div class="row justify-content-center">
+              <div class="col-lg-8 text-center">
+                <button class="btn btn-primary btn-block my-4" type="submit" [disabled]="deviceForm.invalid" > Predict The Price </button>
+                <!-- <button class="btn btn-primary btn-block my-4" type="submit" > Predict The Price </button> -->
+
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,54 @@
+<!-- Services-->
+<section class="page-section" id="providerlist">
+  <div class="container px-4 px-lg-5">
+    <h2 class="text-center mt-0">Devices Prediction </h2>
+    <hr class="divider my-4" />
+
+    <a routerLink="/device/add-device" class="btn btn-primary my-4" routerLinkActive="active">
+      Predict The Price
+    </a>
+    <div class="table-responsive">
+      <table class="table table-hover table-bordered">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">N-cores</th>
+            <th scope="col">Touch_Screen</th>
+            <th scope="col">4_G</th>
+            <th scope="col">Bluetooth</th>
+            <th scope="col">3_G</th>
+            <th scope="col">Battery_Power</th>
+            <th scope="col">Ram</th>
+            <th scope="col">PX_Width</th>
+            <th scope="col">Price</th>
+
+          </tr>
+
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let d of deviceList ">
+            <tr>
+              <td scope="row">{{d.count}}</td>
+              <td scope="row">{{d.n_cores}}</td>
+              <td scope="row">{{d.touch_screen}}</td>
+
+              <td scope="row">{{d.four_g}}</td>
+              <td scope="row">{{d.blue}}</td>
+              <td scope="row">{{d.three_g}}</td>
+              <td scope="row">{{d.battery_power}}</td>
+              <td scope="row">{{d.ram}}</td>
+              <td scope="row">{{d.px_width}}</td>
+              <td scope="row">{{d.price}}</td>
+
+            </tr>
+
+          </ng-container>
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</section>
