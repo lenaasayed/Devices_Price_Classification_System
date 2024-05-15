@@ -1,0 +1,10 @@
+{
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.configuration.runtimes":[{
+            "name": "JavaSE-15",
+            "path": "E:\\yat\\java\\jdk15.0.1"
+        }
+    ],
+    "spring.dashboard.openUrl": "http://localhost:8080/",
+    "java.configuration.updateBuildConfiguration": "interactive",
+}

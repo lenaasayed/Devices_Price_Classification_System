@@ -9,6 +9,7 @@ import { PredictPrice } from '../model/predictPrice';
 export class DeviceService {
 
   //URL Endpoint to our Express app
+  // apiUrl="http://192.168.99.100:8080/api/"
   apiUrl="http://localhost:7000/api/"
 
   apiGetAllDevice=this.apiUrl+"devices";

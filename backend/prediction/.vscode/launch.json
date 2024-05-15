@@ -1,0 +1,18 @@
+{
+    "configurations": [
+    
+        
+        {
+            "type": "java",
+            "name": "Spring Boot-PredictionApplication<prediction>",
+            "request": "launch",
+            
+            // "url": "http://localhost:9000",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.prediction.PredictionApplication",
+            "projectName": "prediction",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
